@@ -3,6 +3,7 @@ import { Receiver } from '@upstash/qstash/cloudflare';
 export interface Env {
 	QSTASH_CURRENT_SIGNING_KEY: string;
 	QSTASH_NEXT_SIGNING_KEY: string;
+	SPOTIFY_CLIENT_ID: string;
 }
 
 export default {
@@ -29,6 +30,7 @@ export default {
 		console.log('The signature was valid');
 
 		// do work here
+		console.log('Spotify client ID', env.SPOTIFY_CLIENT_ID);
 
 		return new Response('Hello World!');
 	},
