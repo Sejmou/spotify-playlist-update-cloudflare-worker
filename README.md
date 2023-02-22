@@ -1,19 +1,5 @@
-# Template: worker-typescript
+# My first Cloudflare Worker
+This Cloudflare worker should one day be able to create most recent versions of my Spotify "Top Tracks" playlists (for last month, last 6 months, and last year) whenever a new request from QStash comes in. QStash is a service that allows one to deploy serverless functions that trigger API calls in a certain time interval - my goal would be to trigger one for this worker at the beginning of every month to not have to do this manually every month. 
 
-[![Deploy to Cloudflare Workers](https://deploy.workers.cloudflare.com/button)](https://deploy.workers.cloudflare.com/?url=https://github.com/cloudflare/templates/tree/main/worker-typescript)
-
-A batteries included template for kick starting a TypeScript Cloudflare worker project.
-
-## Setup
-
-To create a `my-project` directory using this template, run:
-
-```sh
-$ npm init cloudflare my-project worker-typescript
-# or
-$ yarn create cloudflare my-project worker-typescript
-# or
-$ pnpm create cloudflare my-project worker-typescript
-```
-
-> **Note:** Each command invokes [`create-cloudflare`](https://www.npmjs.com/package/create-cloudflare) for project creation.
+## Deploy new version (assuming "spotify-tracks-update" is the desired name of the worker in my workers subdomain)
+Run `yarn deploy --name spotify-top-tracks-update`
