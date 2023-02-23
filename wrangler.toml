@@ -1,7 +1,9 @@
 name = "spotify-top-tracks-update"
 main = "./src/index.ts"
-compatibility_date = "2023-02-22"
-
+compatibility_date = "2023-02-23"
+kv_namespaces = [
+    { binding = "spotifyState", id = "01f06d227c3f4307ae319ebb6e3bcdad", preview_id = "b82e5cdc2f8144a3826ac6bec525a092" }
+]
 [vars]
 SPOTIFY_CLIENT_ID="b973d9746af6465cb000b22524409f4d"
 SPOTIFY_REDIRECT_URI="https://spotify-top-tracks-update.sejmou.workers.dev/callback"
@@ -10,6 +12,3 @@ SPOTIFY_REDIRECT_URI="https://spotify-top-tracks-update.sejmou.workers.dev/callb
 # - QSTASH_NEXT_SIGNING_KEY
 # - SPOTIFY_CLIENT_SECRET
 # Run `echo <VALUE> | wrangler secret put <NAME>` for each of these
-kv_namespaces = [
-    { binding = "spotifyState", id = "01f06d227c3f4307ae319ebb6e3bcdad" }
-]

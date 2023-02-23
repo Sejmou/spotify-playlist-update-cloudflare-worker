@@ -17,11 +17,25 @@ wrangler secret put QSTASH_CURRENT_SIGNING_KEY
 wrangler secret put QSTASH_NEXT_SIGNING_KEY
 ```
 
-## Store Spotify secret
+## Spotify Setup
+Create a new project in the [Spotify Developer Dashboard](https://developer.spotify.com/dashboard). 
+### Store client ID
+You should see the client ID immediately when viewing your new project. Add it in the wrangler.toml file (just update the existing ID).
+
+### Store secret
 Note: if you clone this project from me, you would also need to update the SPOTIFY_CLIENT_ID inside `wrangler.toml` accordingly
 ```
 wrangler secret put SPOTIFY_CLIENT_SECRET
 ```
+
+### Add callback URLs
+You also need to set callback URLs in the settings for your project from the dashboard.
+
+ - local development (with `wrangler dev`): `http://localhost:8787/callback`
+ - production deployment on Cloudflare: `<your-worker-URL>/callback` 
+
+## local testing
+Run `wrangler dev`
 
 ## Deploy new version
 Run `yarn deploy`
