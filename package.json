@@ -9,10 +9,12 @@
 	},
 	"devDependencies": {
 		"@cloudflare/workers-types": "^3.0.0",
+		"@types/spotify-web-api-node": "^5.0.7",
 		"vitest": "^0.24.5",
 		"wrangler": "^2.1.14"
 	},
 	"dependencies": {
-		"@upstash/qstash": "^0.3.6"
+		"@upstash/qstash": "^0.3.6",
+		"spotify-web-api-node": "^5.0.2"
 	}
 }

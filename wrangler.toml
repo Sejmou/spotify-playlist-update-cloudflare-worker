@@ -4,6 +4,7 @@ compatibility_date = "2023-02-22"
 
 [vars]
 SPOTIFY_CLIENT_ID="b973d9746af6465cb000b22524409f4d"
+SPOTIFY_REDIRECT_URI="https://spotify-top-tracks-update.sejmou.workers.dev/callback"
 # The necessary secrets are:
 # - QSTASH_CURRENT_SIGNING_KEY
 # - QSTASH_NEXT_SIGNING_KEY
