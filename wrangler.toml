@@ -10,3 +10,6 @@ SPOTIFY_REDIRECT_URI="https://spotify-top-tracks-update.sejmou.workers.dev/callb
 # - QSTASH_NEXT_SIGNING_KEY
 # - SPOTIFY_CLIENT_SECRET
 # Run `echo <VALUE> | wrangler secret put <NAME>` for each of these
+kv_namespaces = [
+    { binding = "spotifyState", id = "01f06d227c3f4307ae319ebb6e3bcdad" }
+]
